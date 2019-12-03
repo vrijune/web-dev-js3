@@ -1,0 +1,18 @@
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+}
+
+th, tr:last-child { /* last tr child of its parent (table) */
+    border-bottom: 1px solid black;
+}
+
+td:first-child { /* first td child of its parent (tr) */
+    background-color: Lavender;
+    border-right:     1px solid black;
+    border-spacing:   0px;
+}
