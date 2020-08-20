@@ -36,7 +36,7 @@ The aim of this exercise is to change the HTML file so it displays a random imag
 
 To begin we will address the issue of randomly loading a new image when the page is loaded, and check that is operating as desired in the browser. 
 
-Begin by creating an event handler that will fire when the page has loaded fully. In this event handler, call the `loadRandomImage()` function to select and display a new image. Once complete, preview your file in a browser and refresh the page a few times to ensure that random images are loading.
+Begin by calling the `loadRandomImage()` function to select and display a new image. Once this is completed, preview your file in a browser and refresh the page a few times to ensure that random images are loading. Remember to check that you write the call to the `loadRandomImage()` function 
 
 The `changeImage()` function currently changes the featured image, but it does not update the tooltop (the text displayed when you hover over the featured image) or the description text. At the marked `TODO` positions, modify the function so that it retrieves the tooltip and description associated with the image and displays this on the page appropriately.
 
