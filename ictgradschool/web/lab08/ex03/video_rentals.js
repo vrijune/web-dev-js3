@@ -47,6 +47,60 @@ window.addEventListener("load", function () {
     };
 
     /* TODO: Your code here */
+  function createHeadName() {
+      const thead =document.createElement("thead");
+      const tr = document.createElement("tr");
+      const div = document.querySelector("#details");
+      for (let i = 0; i <headerNames.length; i++) {
+
+          const th1 = document.createElement("th");
+          // const th2 =document.createElement("th");
+          // const th3 = document.createElement("th");
+          // const th4 = document.createElement("th");
+          // const th5 = document.createElement("th");
+          th1.innerHTML=headerNames[i];
+          // th2.innerHTML=headerNames[i+1];
+          // th3.innerHTML=headerNames[i+2];
+          // th4.innerHTML=headerNames[i+3];
+          // th5.innerHTML=headerNames[i+4];
+          tr.appendChild(th1);
+          // tr.appendChild(th2);
+          // tr.appendChild(th3);
+          // tr.appendChild(th4);
+          // tr.appendChild(th5);
+          div.appendChild(tr);
+      }
+
+  }
+         createHeadName();
+
+
+
+    const tbody =  document.createElement("tbody");
+    const table = document.querySelector("#details");
+function createTbody() {
+
+    for (let i = 0; i <customers.length; i++) {
+        const tr = document.createElement("tr");
+        tr.innerHTML= `<td>${customers[i].name}</td>
+                       <td>${customers[i].gender}</td>
+                       <td>${customers[i].year_born}</td>
+                       <td>${customers[i].joined}</td>
+                       <td>${customers[i].num_hires}</td>`;
+        tbody.appendChild(tr);
+        table.appendChild(tbody);
+
+
+    }
+}
+
+
+createTbody();
+
+
+
+
+
 
 });
 

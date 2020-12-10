@@ -87,7 +87,12 @@ window.addEventListener("load", function () {
 
         // TODO: Set the tooltip on the image
 
+        featuredImage.title= chosenObject.tooltip;
+
+
         // TODO: Set the description text
+
+        descriptionText.innerText=chosenObject.description;
     }
 
 
@@ -103,6 +108,26 @@ window.addEventListener("load", function () {
         changeImage(numImage);
     }
 
+    function loadClickImage(event) {
+        //load the image that corresponds to the clicked thumbnail
+        // alert(event.target.src);
+        let srcString = event.target.src;
+        let splitStringArray = srcString.split("/");
+        // alert(splitString[splitString.length-1]);
+        let imageNum = splitStringArray[splitStringArray.length - 1].split(".")[0];
+        changeImage(imageNum);
+    }
+
+        let imageThumbs = document.querySelectorAll(".thumb-holder > img");
+        for (imageThumb of imageThumbs) {
+            //console.log(imageThumb.src);
+        imageThumb.addEventListener("click", function (event) {
+            loadClickImage(event);
+        });
+
+    }
+
+    loadRandomImage();
 });
 
 
